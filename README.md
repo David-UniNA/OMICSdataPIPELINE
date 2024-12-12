@@ -9,19 +9,23 @@ Steps:
 
 
 
-We donwloaded the raw reads from the Gene Expression Omnibus (GEO), which is a public functional genomics data repository supporting MIAME-compliant data submissions. (https://www.ncbi.nlm.nih.gov/geo/).
+We donwloaded the raw reads from the Gene Expression Omnibus (GEO https://www.ncbi.nlm.nih.gov/geo/), which is a public functional genomics data repository supporting MIAME-compliant data submissions.
 
-Here is an example for Sample GSM3305457:
+## Here is an example for Sample GSM3305457:
 
-Search the sample on GEO...
+First, search the sample on GEO...
 ![image](https://github.com/user-attachments/assets/71b514a4-2d41-40d9-b194-addb3b2a07af)
-We select the search result item 4 and open it.
+
+Next, select the correct search result (item 4) and open it.
+![image](https://github.com/user-attachments/assets/f77ebeae-a790-4cc5-8e2e-ce318b50bea3)
 
 ![image](https://github.com/user-attachments/assets/924b2312-1962-490c-9e24-c01c7ad5fdbc)
+
 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3305457)
 
 By clicking on the SRA number (SRX4456412)
 ![image](https://github.com/user-attachments/assets/a418f7a4-8032-44a4-b945-7c847ff7c6f3)
+
 (https://www.ncbi.nlm.nih.gov/sra?term=SRX4456412)
 
 We open a new window and click on the SRA run.
@@ -29,4 +33,5 @@ We open a new window and click on the SRA run.
 
 to open the Sequence Read Archive, which provide us with all information of the experiment run.
 ![image](https://github.com/user-attachments/assets/f3826c62-1832-453c-95c4-e25e65acf592)
+
 (https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR7591172&display=metadata)
