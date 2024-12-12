@@ -43,6 +43,13 @@ The description of the syntax is described on the [miRDeep2 homepage](https://ww
 ```
 mirdeep2-master/src/quantifier.pl -p hairpin.fa -m mature.fa -r SRA_RUNreads.fa -t hsa -k
 ```
+The description of the syntax is described on the [miRDeep2 homepage](https://www.mdc-berlin.de/content/mirdeep2-documentation?mdcbl%5B0%5D=/n-rajewsky%23t-data%2Csoftware%26resources&mdctl=0&mdcou=20738&mdcot=6&mdcbv=crsjgo3KpH2eVDwEmJ_-5lh5FYkn8dZh4PNU6NsBrTE).
+[hairpin.fa](https://www.mirbase.org/download/hairpin.fa) is a Fasta format sequences of all miRNA hairpins.
+[mature.fa](https://www.mirbase.org/download/mature.fa) is a Fasta format sequences of all mature miRNA sequences.
+
+The following figure illustrate the working-flow of the pipline.
+![image](https://github.com/user-attachments/assets/3caf3a6f-14d4-4a9b-9dc0-da4b671785b9)
+
 
 ## Installation help:
 1. [miRDeep2](https://github.com/rajewsky-lab/mirdeep2)
