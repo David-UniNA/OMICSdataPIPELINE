@@ -2,8 +2,7 @@
 
 The aim of this repository is to provide a simple step-b-step guide for beginners to map and quantify miRNAs from public available datasets. Therefore, we donwload raw reads from the [Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/), which is a public functional genomics data repository. This guide is based on the linux environment (Ubuntu vers. 22-04) and [miRDeep2](https://www.mdc-berlin.de/content/mirdeep2-documentation?mdcbl%5B0%5D=/n-rajewsky%23t-data%2Csoftware%26resources&mdctl=0&mdcou=20738&mdcot=6&mdcbv=crsjgo3KpH2eVDwEmJ_-5lh5FYkn8dZh4PNU6NsBrTE), which is a software package for identification of novel and known miRNAs in deep sequencing data. The pipline uses the 'adapter sequence' for the Illumina HiSeq 2000 platform, but can generally used for all platforms if the adapter sequence is known.
 
-
-**Pipline steps:**
+<ins>**Pipline steps:**</ins>
 1) Download raw reads
 2) Identify miRNAs with miRDeep2
 3) Quantify miRNAs with miRDeep2
