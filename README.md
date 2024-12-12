@@ -1,7 +1,7 @@
 # OMICS data pipline based on miRDeep2
 
 The aim of this repository is to provide a simple step-b-step guide for beginners to map and quantify miRNAs from public available datasets.
-This guide is based on the linux environment (Ubuntu vers. 22-04) and [miRDeep2](https://www.mdc-berlin.de/content/mirdeep2-documentation?mdcbl%5B0%5D=/n-rajewsky%23t-data%2Csoftware%26resources&mdctl=0&mdcou=20738&mdcot=6&mdcbv=crsjgo3KpH2eVDwEmJ_-5lh5FYkn8dZh4PNU6NsBrTE), which is a software package for identification of novel and known miRNAs in deep sequencing data. The pipline is shown for the Illumina HiSeq 2000 platform.
+This guide is based on the linux environment (Ubuntu vers. 22-04) and [miRDeep2](https://www.mdc-berlin.de/content/mirdeep2-documentation?mdcbl%5B0%5D=/n-rajewsky%23t-data%2Csoftware%26resources&mdctl=0&mdcou=20738&mdcot=6&mdcbv=crsjgo3KpH2eVDwEmJ_-5lh5FYkn8dZh4PNU6NsBrTE), which is a software package for identification of novel and known miRNAs in deep sequencing data. The pipline uses the 'adapter sequence' for the Illumina HiSeq 2000 platform.
 
 
 **Steps:**
@@ -9,6 +9,7 @@ This guide is based on the linux environment (Ubuntu vers. 22-04) and [miRDeep2]
 2) Identify miRNAs with miRDeep2
 3) Quantify miRNAs with miRDeep2
 
+_________________
 
 We donwloaded the raw reads from the [Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/), which is a public functional genomics data repository supporting MIAME-compliant data submissions.
 
@@ -91,4 +92,18 @@ The following figure illustrate the working-flow of the pipline.
    vdb-config -i
    ```
    We have to set the cache folder. In our case we have chosen 'Downloads/tmp' and exit the installation.
- 
+
+5. [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) Quality control tool for high throughput sequence data.
+   Unzip file in Downloads. Install Java if needed with:
+   ```
+   sudo apt install default-jre
+   ```
+   Change directory. Enter in FastQC folder.
+   ```
+   cd FastQC/
+   ```
+   run the pplication.
+   ```
+   ./fastqc
+   ```
+    
