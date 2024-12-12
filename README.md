@@ -1,7 +1,7 @@
 # OMICS data pipline based on miRDeep2
 
 The aim of this repository is to provide a simple step-b-step guide for beginners to map and quantify miRNAs from public available datasets.
-This guide is based on the linux environment (Ubuntu) and [miRDeep2](https://www.mdc-berlin.de/content/mirdeep2-documentation?mdcbl%5B0%5D=/n-rajewsky%23t-data%2Csoftware%26resources&mdctl=0&mdcou=20738&mdcot=6&mdcbv=crsjgo3KpH2eVDwEmJ_-5lh5FYkn8dZh4PNU6NsBrTE), which is a software package for identification of novel and known miRNAs in deep sequencing data.
+This guide is based on the linux environment (Ubuntu vers. 22-04) and [miRDeep2](https://www.mdc-berlin.de/content/mirdeep2-documentation?mdcbl%5B0%5D=/n-rajewsky%23t-data%2Csoftware%26resources&mdctl=0&mdcou=20738&mdcot=6&mdcbv=crsjgo3KpH2eVDwEmJ_-5lh5FYkn8dZh4PNU6NsBrTE), which is a software package for identification of novel and known miRNAs in deep sequencing data.
 
 
 **Steps:**
@@ -33,12 +33,38 @@ fastq-dump –split-files SRA_RUN
 ```
 SRA_RUN should be changed according to the experiment run name (SRR7591172).
 
+Next we used the mapping function of miRDeep2 with the following command
+```
+mirdeep2-master/src/mapper.pl SRA_RUN.fastq -e -h -i -j -l 18 -k CUT_ADAPT -m -p Bowtie/B -q -s SRA_RUNreads.fa -t SRA_RUNreadsVSgenome -v -n
+```
+
 ## Installation help:
-1. miRDeep2
+1. [miRDeep2](https://github.com/rajewsky-lab/mirdeep2) with [bowtie](https://zoomadmin.com/HowToInstall/UbuntuPackage/bowtie)
+   Download zip file of all miRDeep2 and unpack the file in Downloads.
+   If not already installed on Ubuntu we have to manually install the [GCC compiler](https://linuxize.com/post/how-to-install-gcc-compiler-on-ubuntu-18-04/).
+   Open new terminal and install [bowtie](https://zoomadmin.com/HowToInstall/UbuntuPackage/bowtie).
+   Next step, install perl.
+   ```
+   cd mirdeep2-master/
+   ```
+   ```
+   perl install.pl
+   ```
+   When the tutorial message appears the installation works!
+
+   There should be no need to install ViennRNA manually.
+   If yes follow the next steps:
+   from [viennaRNA homepage](https://www.tbi.univie.ac.at/RNA/) we downloaded the version ubuntu 22.04 file deb and run the installation with the foollowing command:
+   ```
+   sudo dpkg -i viennarna_2.6.2-1_amd64.deb
+   ```
+   
 2. [SRA toolkit](https://github.com/ncbi/sra-tools) (ver. 3.0.7):
    Command in terminal of Ubuntu:
    ```
    sudo apt install sra-toolkit
+   ```
+   ```
    vdb-config -i
    ```
    We have to set the cache folder. In our case we have chosen 'Downloads/tmp' and exit the installation.
