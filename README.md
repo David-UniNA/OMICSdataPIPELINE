@@ -27,7 +27,7 @@ Here is a short guide to find a sequence read archive for a A375 cell line exper
 5. open Sequence Read Archive, which provide us with all information of the experiment run (https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR7591172&display=metadata).
 ![image](https://github.com/user-attachments/assets/f3826c62-1832-453c-95c4-e25e65acf592)
 
-### Once we found the SRA run we are interested in we use the [SRA toolkit](https://github.com/ncbi/sra-tools) to dowload the fastq file of the experiment using the following command
+### Once we found the SRA run we are interested in we use the [SRA toolkit](https://github.com/ncbi/sra-tools) to download the fastq file of the experiment using the following command
 ```
 fastq-dump –split-files SRA_RUN
 ```
@@ -44,11 +44,11 @@ The description of the syntax is described on the [miRDeep2 homepage](https://ww
 mirdeep2-master/src/quantifier.pl -p hairpin.fa -m mature.fa -r SRA_RUNreads.fa -t hsa -k
 ```
 The description of the syntax is described on the [miRDeep2 homepage](https://www.mdc-berlin.de/content/mirdeep2-documentation?mdcbl%5B0%5D=/n-rajewsky%23t-data%2Csoftware%26resources&mdctl=0&mdcou=20738&mdcot=6&mdcbv=crsjgo3KpH2eVDwEmJ_-5lh5FYkn8dZh4PNU6NsBrTE).
-[hairpin.fa](https://www.mirbase.org/download/hairpin.fa) is a Fasta format sequences of all miRNA hairpins.
-[mature.fa](https://www.mirbase.org/download/mature.fa) is a Fasta format sequences of all mature miRNA sequences.
+  [hairpin.fa](https://www.mirbase.org/download/hairpin.fa) is a Fasta format sequences of all miRNA hairpins.
+  [mature.fa](https://www.mirbase.org/download/mature.fa) is a Fasta format sequences of all mature miRNA sequences.
 
 The following figure illustrate the working-flow of the pipline.
-![image](https://github.com/user-attachments/assets/3caf3a6f-14d4-4a9b-9dc0-da4b671785b9)
+  ![image](https://github.com/user-attachments/assets/3caf3a6f-14d4-4a9b-9dc0-da4b671785b9)
 
 
 ## Installation help:
