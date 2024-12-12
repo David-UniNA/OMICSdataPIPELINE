@@ -28,14 +28,14 @@ Here is a short guide to find a sequence read archive for a A375 cell line exper
 ![image](https://github.com/user-attachments/assets/f3826c62-1832-453c-95c4-e25e65acf592)
 
 Once we found the SRA run we are interested in we use the [SRA toolkit](https://github.com/ncbi/sra-tools) to dowload the fastq file of the experiment using the following command
-> fastq-dump –split-files SRA_RUN
+'''fastq-dump –split-files SRA_RUN'''
 SRA_RUN should be changed according to the experiment run name (SRR7591172).
 
 Installation help:
 1. miRDeep2
 2. [SRA toolkit](https://github.com/ncbi/sra-tools) (ver. 3.0.7):
    Command in terminal of Ubuntu:
-   >sudo apt install sra-toolkit
-	 >vdb-config -i
+   '''sudo apt install sra-toolkit'''
+   '''vdb-config -i'''
    We have to set the cache folder. In our case we have chosen 'Downloads/tmp' and exit the installation.
  
