@@ -27,23 +27,28 @@ Here is a short guide to find a sequence read archive for a A375 cell line exper
 5. open Sequence Read Archive, which provide us with all information of the experiment run (https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR7591172&display=metadata).
 ![image](https://github.com/user-attachments/assets/f3826c62-1832-453c-95c4-e25e65acf592)
 
-Once we found the SRA run we are interested in we use the [SRA toolkit](https://github.com/ncbi/sra-tools) to dowload the fastq file of the experiment using the following command
+### Once we found the SRA run we are interested in we use the [SRA toolkit](https://github.com/ncbi/sra-tools) to dowload the fastq file of the experiment using the following command
 ```
 fastq-dump –split-files SRA_RUN
 ```
 SRA_RUN should be changed according to the experiment run name (SRR7591172).
 
-Next we used the mapping function of miRDeep2 with the following command
+### Next we used the mapping function of miRDeep2 with the following command
 ```
 mirdeep2-master/src/mapper.pl SRA_RUN.fastq -e -h -i -j -l 18 -k CUT_ADAPT -m -p Bowtie/B -q -s SRA_RUNreads.fa -t SRA_RUNreadsVSgenome -v -n
 ```
+The description of the syntax is described on the [miRDeep2 homepage](https://www.mdc-berlin.de/content/mirdeep2-documentation?mdcbl%5B0%5D=/n-rajewsky%23t-data%2Csoftware%26resources&mdctl=0&mdcou=20738&mdcot=6&mdcbv=crsjgo3KpH2eVDwEmJ_-5lh5FYkn8dZh4PNU6NsBrTE).
+ 
+### Last step is the quantifing of reads using the quantifier function from miRDeep2
+```
+mirdeep2-master/src/quantifier.pl -p hairpin.fa -m mature.fa -r SRA_RUNreads.fa -t hsa -k
+```
 
 ## Installation help:
-1. [miRDeep2](https://github.com/rajewsky-lab/mirdeep2) with [bowtie](https://zoomadmin.com/HowToInstall/UbuntuPackage/bowtie)
+1. [miRDeep2](https://github.com/rajewsky-lab/mirdeep2)
    Download zip file of all miRDeep2 and unpack the file in Downloads.
    If not already installed on Ubuntu we have to manually install the [GCC compiler](https://linuxize.com/post/how-to-install-gcc-compiler-on-ubuntu-18-04/).
-   Open new terminal and install [bowtie](https://zoomadmin.com/HowToInstall/UbuntuPackage/bowtie).
-   Next step, install perl.
+   Open new terminal we install perl:
    ```
    cd mirdeep2-master/
    ```
@@ -53,13 +58,18 @@ mirdeep2-master/src/mapper.pl SRA_RUN.fastq -e -h -i -j -l 18 -k CUT_ADAPT -m -p
    When the tutorial message appears the installation works!
 
    There should be no need to install ViennRNA manually.
-   If yes follow the next steps:
-   from [viennaRNA homepage](https://www.tbi.univie.ac.at/RNA/) we downloaded the version ubuntu 22.04 file deb and run the installation with the foollowing command:
+   If yes follow the next steps. From [viennaRNA homepage](https://www.tbi.univie.ac.at/RNA/) we downloaded the version ubuntu 22.04 file deb and run the installation with the foollowing command:
    ```
    sudo dpkg -i viennarna_2.6.2-1_amd64.deb
    ```
-   
-2. [SRA toolkit](https://github.com/ncbi/sra-tools) (ver. 3.0.7):
+
+2. [bowtie]([https://zoomadmin.com/HowToInstall/UbuntuPackage/bowtie](https://bowtie-bio.sourceforge.net/manual.shtml))
+   We install bowtie a shor read aligner to quickly align large sets of short DNA sequences to large genomes such as the ‘GRCh38p14’ human genome assembly. Therefore, we download [bowtie build 1.1.1](https://zoomadmin.com/HowToInstall/UbuntuPackage/bowtie) and run it with the following command:
+   ```
+   mirdeep2-master/essentials/bowtie-1.1.1/bowtie-build GRCh38.p14
+   ```
+      
+4. [SRA toolkit](https://github.com/ncbi/sra-tools) (ver. 3.0.7):
    Command in terminal of Ubuntu:
    ```
    sudo apt install sra-toolkit
