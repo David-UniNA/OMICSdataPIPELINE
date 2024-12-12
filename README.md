@@ -10,7 +10,8 @@ The aim of this repository is to provide a simple step-b-step guide for beginner
 
 The following schema illustrate the working-flow of the presented pipline.
 <br>
-![image](https://github.com/user-attachments/assets/706380eb-531a-4fee-ac09-a1966ccb3826)
+![image](https://github.com/user-attachments/assets/96ec3609-79e5-4dce-a368-c84611777881)
+
 _________________
 
 ## Here is an example for a cell line dataset from the public available sample:
