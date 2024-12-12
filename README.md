@@ -9,7 +9,8 @@ The aim of this repository is to provide a simple step-b-step guide for beginner
 3) Quantify miRNAs with miRDeep2
 
 The following schema illustrate the working-flow of the presented pipline.
-<br>![image](https://github.com/user-attachments/assets/3caf3a6f-14d4-4a9b-9dc0-da4b671785b9)
+<br>
+<div style="text-align:center"><![image](https://github.com/user-attachments/assets/3caf3a6f-14d4-4a9b-9dc0-da4b671785b9)></div>.
 _________________
 
 ## Here is an example for a cell line dataset from the public available sample:
