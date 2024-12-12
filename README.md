@@ -14,12 +14,10 @@ We donwloaded the raw reads from the Gene Expression Omnibus (GEO https://www.nc
 ## Here is an example for Sample GSM3305457:
 
 First, search the sample on GEO...
-![image](https://github.com/user-attachments/assets/71b514a4-2d41-40d9-b194-addb3b2a07af)
+![image](https://github.com/user-attachments/assets/924b2312-1962-490c-9e24-c01c7ad5fdbc)
 
 Next, select the correct search result (item 4) and open it.
 ![image](https://github.com/user-attachments/assets/f77ebeae-a790-4cc5-8e2e-ce318b50bea3)
-
-![image](https://github.com/user-attachments/assets/924b2312-1962-490c-9e24-c01c7ad5fdbc)
 
 (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3305457)
 
