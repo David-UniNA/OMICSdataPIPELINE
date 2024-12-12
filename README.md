@@ -73,7 +73,7 @@ _________________
    sudo dpkg -i viennarna_2.6.2-1_amd64.deb
    ```
 
-2. [bowtie]([https://zoomadmin.com/HowToInstall/UbuntuPackage/bowtie](https://bowtie-bio.sourceforge.net/manual.shtml))
+2. [bowtie](https://bowtie-bio.sourceforge.net/manual.shtml)
    We install bowtie a shor read aligner to quickly align large sets of short DNA sequences to large genomes such as the ‘GRCh38p14’ human genome assembly. Therefore, we download [bowtie build 1.1.1](https://zoomadmin.com/HowToInstall/UbuntuPackage/bowtie) and run it with the following command:
    ```
    mirdeep2-master/essentials/bowtie-1.1.1/bowtie-build GRCh38.p14
