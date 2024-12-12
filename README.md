@@ -1,12 +1,13 @@
 # OMICS data pipline based on miRDeep2
 
 The aim of this repository is to provide a simple step-b-step guide for beginners to map and quantify miRNAs from public available datasets.
-This guide is based on the linux environment (Ubuntu vers. 22-04) and [miRDeep2](https://www.mdc-berlin.de/content/mirdeep2-documentation?mdcbl%5B0%5D=/n-rajewsky%23t-data%2Csoftware%26resources&mdctl=0&mdcou=20738&mdcot=6&mdcbv=crsjgo3KpH2eVDwEmJ_-5lh5FYkn8dZh4PNU6NsBrTE), which is a software package for identification of novel and known miRNAs in deep sequencing data.
+This guide is based on the linux environment (Ubuntu vers. 22-04) and [miRDeep2](https://www.mdc-berlin.de/content/mirdeep2-documentation?mdcbl%5B0%5D=/n-rajewsky%23t-data%2Csoftware%26resources&mdctl=0&mdcou=20738&mdcot=6&mdcbv=crsjgo3KpH2eVDwEmJ_-5lh5FYkn8dZh4PNU6NsBrTE), which is a software package for identification of novel and known miRNAs in deep sequencing data. The pipline is shown for the Illumina HiSeq 2000 platform.
 
 
 **Steps:**
 1) Download raw reads
 2) Identify miRNAs with miRDeep2
+3) Quantify miRNAs with miRDeep2
 
 
 We donwloaded the raw reads from the [Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/), which is a public functional genomics data repository supporting MIAME-compliant data submissions.
@@ -37,7 +38,10 @@ SRA_RUN should be changed according to the experiment run name (SRR7591172).
 ```
 mirdeep2-master/src/mapper.pl SRA_RUN.fastq -e -h -i -j -l 18 -k CUT_ADAPT -m -p Bowtie/B -q -s SRA_RUNreads.fa -t SRA_RUNreadsVSgenome -v -n
 ```
-The description of the syntax is described on the [miRDeep2 homepage](https://www.mdc-berlin.de/content/mirdeep2-documentation?mdcbl%5B0%5D=/n-rajewsky%23t-data%2Csoftware%26resources&mdctl=0&mdcou=20738&mdcot=6&mdcbv=crsjgo3KpH2eVDwEmJ_-5lh5FYkn8dZh4PNU6NsBrTE).
+The description of the syntax is described on the [miRDeep2 homepage](https://www.mdc-berlin.de/content/mirdeep2-documentation?mdcbl%5B0%5D=/n-rajewsky%23t-data%2Csoftware%26resources&mdctl=0&mdcou=20738&mdcot=6&mdcbv=crsjgo3KpH2eVDwEmJ_-5lh5FYkn8dZh4PNU6NsBrTE). CUT_ADAPT sequence for Illumina HiSeq 2000 is:
+```
+TGGAATTCTCGGGTGCCAAGG
+```
  
 ### Last step is the quantifing of reads using the quantifier function from miRDeep2
 ```
@@ -46,6 +50,8 @@ mirdeep2-master/src/quantifier.pl -p hairpin.fa -m mature.fa -r SRA_RUNreads.fa 
 The description of the syntax is described on the [miRDeep2 homepage](https://www.mdc-berlin.de/content/mirdeep2-documentation?mdcbl%5B0%5D=/n-rajewsky%23t-data%2Csoftware%26resources&mdctl=0&mdcou=20738&mdcot=6&mdcbv=crsjgo3KpH2eVDwEmJ_-5lh5FYkn8dZh4PNU6NsBrTE).
 <br>[hairpin.fa](https://www.mirbase.org/download/hairpin.fa) is a Fasta format sequences of all miRNA hairpins.
 <br>[mature.fa](https://www.mirbase.org/download/mature.fa) is a Fasta format sequences of all mature miRNA sequences.
+
+The result shows a mapping of 63% of 8 readds per million.
 
 The following figure illustrate the working-flow of the pipline.
 <br>![image](https://github.com/user-attachments/assets/3caf3a6f-14d4-4a9b-9dc0-da4b671785b9)
