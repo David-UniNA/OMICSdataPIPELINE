@@ -3,6 +3,7 @@
 The aim of this repository is to provide a simple step-b-step guide for beginners to map and quantify miRNAs from public available datasets.
 This guide is based on the linux environment (Ubuntu) and [miRDeep2](https://www.mdc-berlin.de/content/mirdeep2-documentation?mdcbl%5B0%5D=/n-rajewsky%23t-data%2Csoftware%26resources&mdctl=0&mdcou=20738&mdcot=6&mdcbv=crsjgo3KpH2eVDwEmJ_-5lh5FYkn8dZh4PNU6NsBrTE), which is a software package for identification of novel and known miRNAs in deep sequencing data.
 
+
 **Steps:**
 1) Download raw reads
 2) Identify miRNAs with miRDeep2
@@ -10,7 +11,10 @@ This guide is based on the linux environment (Ubuntu) and [miRDeep2](https://www
 
 We donwloaded the raw reads from the [Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/), which is a public functional genomics data repository supporting MIAME-compliant data submissions.
 
-## Here is an example for Sample GSM3305457:
+## Here is an example for a cell line dataset from the public available sample:
+
+We first search the dataset we are interested about and read the experimental conditions.
+Here is a short guide to find a sequence read archive for a A375 cell line experiment based on sample GSM3305457.
 
 1. search the sample on GEO...
 ![image](https://github.com/user-attachments/assets/924b2312-1962-490c-9e24-c01c7ad5fdbc)
@@ -22,3 +26,16 @@ We donwloaded the raw reads from the [Gene Expression Omnibus](https://www.ncbi.
 ![image](https://github.com/user-attachments/assets/d0176c2f-4db1-42ab-9a02-7fc0e0241f9d)
 5. open Sequence Read Archive, which provide us with all information of the experiment run (https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR7591172&display=metadata).
 ![image](https://github.com/user-attachments/assets/f3826c62-1832-453c-95c4-e25e65acf592)
+
+Once we found the SRA run we are interested in we use the [SRA toolkit](https://github.com/ncbi/sra-tools) to dowload the fastq file of the experiment using the following command
+> fastq-dump –split-files SRA_RUN
+SRA_RUN should be changed according to the experiment run name (SRR7591172).
+
+Installation help:
+1. miRDeep2
+2. [SRA toolkit](https://github.com/ncbi/sra-tools) (ver. 3.0.7):
+   Command in terminal of Ubuntu:
+   >sudo apt install sra-toolkit
+	 >vdb-config -i
+   We have to set the cache folder. In our case we have chosen 'Downloads/tmp' and exit the installation.
+ 
