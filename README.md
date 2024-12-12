@@ -3,9 +3,9 @@
 The aim of this repository is to provide a simple step-b-step guide for beginners to map and quantify miRNAs from public available datasets.
 This guide is based on the linux environment (Ubuntu) and miRDeep2, which is a software package for identification of novel and known miRNAs in deep sequencing data. (https://www.mdc-berlin.de/content/mirdeep2-documentation?mdcbl%5B0%5D=/n-rajewsky%23t-data%2Csoftware%26resources&mdctl=0&mdcou=20738&mdcot=6&mdcbv=crsjgo3KpH2eVDwEmJ_-5lh5FYkn8dZh4PNU6NsBrTE)
 
-Steps:
-1) Download raw reads
-2) Identify miRNAs with miRDeep2
+**Steps:**
+* *1) Download raw reads
+2) Identify miRNAs with miRDeep2* *
 
 
 
