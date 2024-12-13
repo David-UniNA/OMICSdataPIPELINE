@@ -15,19 +15,16 @@ The following schema illustrates the workflow of the presented pipeline:
 
 ## Example for a Cell Line Dataset from Publicly Available Samples
 
-This is a short guide to find a sequence read archive for an A375 cell line experiment based on sample GSM3305457.
+This is a short guide to find a sequence read archive for an A375 cell line experiment based on sample GSM2475129.
 
 1. Search the sample on GEO...
-   ![image](https://github.com/user-attachments/assets/924b2312-1962-490c-9e24-c01c7ad5fdbc)
-2. Select the correct search result (item 4) and open it: [GSM3305457](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3305457)...
-   ![image](https://github.com/user-attachments/assets/f77ebeae-a790-4cc5-8e2e-ce318b50bea3)
-3. Click on the SRA number (SRX4456412) to get more information: [SRX4456412](https://www.ncbi.nlm.nih.gov/sra?term=SRX4456412)...
-   ![image](https://github.com/user-attachments/assets/a418f7a4-8032-44a4-b945-7c847ff7c6f3)
-4. Open the SRA run...
-   ![image](https://github.com/user-attachments/assets/d0176c2f-4db1-42ab-9a02-7fc0e0241f9d)
-5. Open the Sequence Read Archive, which provides all information about the experiment run: [SRR7591172](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR7591172&display=metadata).
-   ![image](https://github.com/user-attachments/assets/f3826c62-1832-453c-95c4-e25e65acf592)
-
+   ![image](https://github.com/user-attachments/assets/167c9117-82c0-4b5f-901d-4f7feb2744c1)
+2. Click on the SRA experiment (SRX2533381) to get more information...
+   ![image](https://github.com/user-attachments/assets/83d69921-49d0-43ed-8182-7a07f4e91d3f)
+3. Open the SRA run...
+   ![image](https://github.com/user-attachments/assets/f6f421de-7a4c-44c6-bade-17ba11fc09a9)
+4. Sequence Read Archive, which provides all information about the experiment run (SRR5224202).
+   ![image](https://github.com/user-attachments/assets/6a261779-fff1-4840-9b83-174d22d54bf2)
 ---
 
 ### Downloading FastQ File
@@ -35,7 +32,7 @@ Once we find the SRA run of interest, we use the [SRA toolkit](https://github.co
 ```bash
 fastq-dump --split-files SRA_RUN
 ```
-Replace `SRA_RUN` with the experiment run name (e.g., SRR7591172).
+Replace `SRA_RUN` with the experiment run name (e.g., SRR5224202).
 
 ### Mapping miRNAs Using miRDeep2
 Use the mapping function of miRDeep2 with the following command:
