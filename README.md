@@ -17,13 +17,13 @@ The following schema illustrates the workflow of the presented pipeline:
 
 This is a short guide to find a sequence read archive for an A375 cell line experiment based on sample GSM2475129.
 
-1. Search the sample on GEO...
+1. Search the sample on GEO...<br>
    ![image](https://github.com/user-attachments/assets/167c9117-82c0-4b5f-901d-4f7feb2744c1)
-2. Click on the SRA experiment (SRX2533381) to get more information...
+2. Click on the SRA experiment (SRX2533381) to get more information...<br>
    ![image](https://github.com/user-attachments/assets/83d69921-49d0-43ed-8182-7a07f4e91d3f)
-3. Open the SRA run...
+3. Open the SRA run...<br>
    ![image](https://github.com/user-attachments/assets/f6f421de-7a4c-44c6-bade-17ba11fc09a9)
-4. Sequence Read Archive, which provides all information about the experiment run (SRR5224202).
+4. Sequence Read Archive, which provides all information about the experiment run (SRR5224202).<br>
    ![image](https://github.com/user-attachments/assets/6a261779-fff1-4840-9b83-174d22d54bf2)
 ---
 
