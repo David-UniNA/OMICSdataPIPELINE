@@ -54,7 +54,7 @@ Refer to the [miRDeep2 documentation](https://www.mdc-berlin.de/content/mirdeep2
 - [hairpin.fa](https://www.mirbase.org/download/hairpin.fa) contains Fasta sequences of all miRNA hairpins.
 - [mature.fa](https://www.mirbase.org/download/mature.fa) contains Fasta sequences of all mature miRNA sequences.
 
-For the presented case, the results show 63% mapping and 8 reads per million (RPM). You can browse the A375 folder for the quantification outcome.
+For the presented case (SRR5224202), the results show a mapping of 62% and 10 reads per million (RPM). You can browse the A375 folder for the quantification outcome.
 
 ---
 
