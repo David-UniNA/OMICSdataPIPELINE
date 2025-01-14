@@ -61,12 +61,28 @@ For the presented case (SRR5224202), the results show a mapping of 62% and 10 re
 ## Installation Guide for Ubuntu
 
 ### 1. [miRDeep2](https://github.com/rajewsky-lab/mirdeep2)
-Download and unpack the miRDeep2 tool in the `Downloads` folder. If not already installed, manually install the [GCC compiler](https://linuxize.com/post/how-to-install-gcc-compiler-on-ubuntu-18-04/). Open a terminal and run:
+Download and unpack the miRDeep2 tool in the `Downloads` folder. If not already installed, manually install the [GCC compiler](https://linuxize.com/post/how-to-install-gcc-compiler-on-ubuntu-18-04/) using the following command:
+```bash
+sudo apt-get install build-essential
+```
+other useful packages are installed:
+```bash
+sudo apt install ruby
+sudo apt install curl
+sudo apt update && sudo apt upgarde
+```
+To install miRDeep2, open a new terminal and run:
 ```bash
 cd mirdeep2-master/
 perl install.pl
 ```
-Ensure installation works by checking for tutorial messages. There is usually no need to manually install [ViennaRNA](https://www.tbi.univie.ac.at/RNA/). If required, download the `.deb` file for Ubuntu 22.04 and install it with:
+It can be that you have to run 2 times the script to complete the installation. Ensure installation works by checking for tutorial messages in the end. 
+To run the tutorial:
+```bash
+cd tutorial_dir/
+bash run_tut.sh
+```
+There is usually no need to manually install [ViennaRNA](https://www.tbi.univie.ac.at/RNA/). If required, download the `.deb` file for Ubuntu 22.04 and install it with:
 ```bash
 sudo dpkg -i viennarna_2.6.2-1_amd64.deb
 ```
