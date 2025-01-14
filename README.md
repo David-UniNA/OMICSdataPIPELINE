@@ -92,6 +92,12 @@ Install Bowtie, a short-read aligner, for aligning large DNA sequences to genome
 ```bash
 mirdeep2-master/essentials/bowtie-1.1.1/bowtie-build GRCh38.p14.genome.fa B
 ```
+If the following message appears (/usr/bin/env: 'python': No such file or directory), the python interpreter cannot be located. Means the pzthon command can not be correctly linked to an existing python installation. To solve this issue:
+```bash
+sudo apt install python3
+sudo ln -s /usr/bin/python3 /usr/bin/python
+#!/usr/bin/env python3
+```
 
 ### 3. [SRA Toolkit](https://github.com/ncbi/sra-tools) (ver. 3.0.7)
 Install the SRA toolkit for dataset downloads using:
