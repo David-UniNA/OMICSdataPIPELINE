@@ -65,7 +65,7 @@ Download and unpack the miRDeep2 tool in the `Downloads` folder. If not already 
 ```bash
 sudo apt-get install build-essential
 ```
-other useful packages are installed:
+other useful packages:
 ```bash
 sudo apt install ruby
 sudo apt install curl
