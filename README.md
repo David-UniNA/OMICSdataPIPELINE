@@ -90,7 +90,7 @@ sudo dpkg -i viennarna_2.6.2-1_amd64.deb
 ### 2. [Bowtie](https://bowtie-bio.sourceforge.net/manual.shtml)
 Install Bowtie, a short-read aligner, for aligning large DNA sequences to genomes. Download [Bowtie build 1.1.1](https://zoomadmin.com/HowToInstall/UbuntuPackage/bowtie) and run:
 ```bash
-mirdeep2-master/essentials/bowtie-1.1.1/bowtie-build GRCh38.p14
+mirdeep2-master/essentials/bowtie-1.1.1/bowtie-build GRCh38.p14.genome.fa B
 ```
 
 ### 3. [SRA Toolkit](https://github.com/ncbi/sra-tools) (ver. 3.0.7)
