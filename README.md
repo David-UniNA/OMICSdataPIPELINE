@@ -43,6 +43,15 @@ For a detailed description of the syntax, refer to the [miRDeep2 documentation](
 ```text
 TGGAATTCTCGGGTGCCAAGG
 ```
+If the SRA download splitted the FastQ file in more than 1 files, the following command should be used.
+```bash
+mirdeep2-master/src/mapper.pl config.txt -d -e -h -i -j -l 18 -k CUT_ADAPT -m -p Bowtie/B -q -s SRA_RUNreads.fa -t SRA_RUNreadsVSgenome -v -n
+```
+where config.txt is a text file with following content:
+```text
+SRA_RUN_1.fastq  sd1
+SRA_RUN_2.fastq  sd2
+```
 
 ### Quantifying Reads Using miRDeep2
 The final step is quantifying reads using the quantifier function from miRDeep2:
