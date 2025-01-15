@@ -1,6 +1,6 @@
 # OMICS Data Pipeline Based on miRDeep2
 
-The aim of this repository is to provide a simple step-by-step guide for beginners to map and quantify miRNAs from publicly available datasets. We download raw reads from the [Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/), a public functional genomics data repository. This guide is based on the Linux environment (Ubuntu version 22.04) and [miRDeep2](https://www.mdc-berlin.de/content/mirdeep2-documentation?mdcbl%5B0%5D=/n-rajewsky%23t-data%2Csoftware%26resources&mdctl=0&mdcou=20738&mdcot=6&mdcbv=crsjgo3KpH2eVDwEmJ_-5lh5FYkn8dZh4PNU6NsBrTE), a software package for the identification of novel and known miRNAs in deep sequencing data. The pipeline uses the 'adapter sequence' for the Illumina HiSeq 2000 platform but can generally be used for all platforms if the adapter sequence is known.
+The aim of this repository is to provide a simple step-by-step guide for beginners to map and quantify miRNAs from publicly available datasets. We download raw reads from the [Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/), a public functional genomics data repository. This guide is based on the Linux environment (Ubuntu version 22.04) and [miRDeep2](https://www.mdc-berlin.de/content/mirdeep2-documentation?mdcbl%5B0%5D=/n-rajewsky%23t-data%2Csoftware%26resources&mdctl=0&mdcou=20738&mdcot=6&mdcbv=crsjgo3KpH2eVDwEmJ_-5lh5FYkn8dZh4PNU6NsBrTE), a software package for the identification of novel and known miRNAs in deep sequencing data. The pipeline uses the 'adapter sequence' for the Illumina HiSeq 2000 platform but can generally be used for all platforms if the adapter sequence is known. Please [cite] (https://www.sciencedirect.com/science/article/pii/S2001037024004458) the following work if this repository was helpful for your work.
 
 ## Pipeline Steps
 1. Download raw reads
@@ -66,6 +66,8 @@ Refer to the [miRDeep2 documentation](https://www.mdc-berlin.de/content/mirdeep2
 For the presented case (SRR5224202), the results show a mapping of 62% and 10 reads per million (RPM). You can browse the A375 folder for the quantification outcome.
 
 ---
+## Cite
+[Integrative analysis of miRNA expression data reveals a minimal signature for tumour cells classification] (https://doi.org/10.1016/j.csbj.2024.12.023)
 
 ## Installation Guide for Ubuntu
 
@@ -94,6 +96,14 @@ bash run_tut.sh
 There is usually no need to manually install [ViennaRNA](https://www.tbi.univie.ac.at/RNA/). If required, download the `.deb` file for Ubuntu 22.04 and install it with:
 ```bash
 sudo dpkg -i viennarna_2.6.2-1_amd64.deb
+```
+If RNAfold: not found, appears during the RNA quantification the following steps should be performed. Download the source code from ViennaRNA and run th following commands:
+```bash
+tar -zxvf ViennaRNA-2.7.0.tar.gz
+cd ViennaRNA-2.7.0
+./configure
+make
+sudo make install
 ```
 
 ### 2. [Bowtie](https://bowtie-bio.sourceforge.net/manual.shtml)
